@@ -619,18 +619,18 @@ $Button1.height                  = 30
 $Button1.location                = New-Object System.Drawing.Point(4,197)
 $Button1.Font                    = New-Object System.Drawing.Font('Microsoft Sans Serif',12)
 
-$NFS                             = New-Object system.Windows.Forms.Button
-$NFS.text                        = "Enable NFS"
-$NFS.width                       = 211
-$NFS.height                      = 30
-$NFS.location                    = New-Object System.Drawing.Point(4,232)
-$NFS.Font                        = New-Object System.Drawing.Font('Microsoft Sans Serif',12)
+$DISM                             = New-Object system.Windows.Forms.Button
+$DISM.text                        = "DISM"
+$DISM.width                       = 211
+$DISM.height                      = 30
+$DISM.location                    = New-Object System.Drawing.Point(4,232)
+$DISM.Font                        = New-Object System.Drawing.Font('Microsoft Sans Serif',12)
 
 $Form.controls.AddRange(@($Panel1,$Panel2,$Label3,$Label15,$Panel4,$PictureBox1,$Label1,$Label4,$Panel3,$ResultText,$Label10,$Label11,$urlfixwinstartup,$urlremovevirus,$urlcreateiso))
 $Panel1.controls.AddRange(@($brave,$firefox,$7zip,$sharex,$adobereader,$notepad,$gchrome,$mpc,$vlc,$powertoys,$ccleaner,$winterminal,$vscode,$Label2,$sumatrapdf,$vscodium,$imageglass,$gimp,$Label7,$Label8,$Label9,$advancedipscanner,$putty,$etcher,$translucenttb,$githubdesktop,$discord,$WinDirStat))
 $Panel2.controls.AddRange(@($essentialtweaks,$backgroundapps,$cortana,$actioncenter,$darkmode,$performancefx,$onedrive,$lightmode,$essentialundo,$EActionCenter,$ECortana,$RBackgroundApps,$HTrayIcons,$EClipboardHistory,$ELocation,$InstallOneDrive,$removebloat,$reinstallbloat,$WarningLabel,$Label5,$appearancefx,$STrayIcons,$EHibernation,$dualboottime))
 $Panel4.controls.AddRange(@($defaultwindowsupdate,$securitywindowsupdate,$Label16,$Label17,$Label18,$Label19))
-$Panel3.controls.AddRange(@($sfc,$Label6,$windowsupdatefix,$ncpa,$oldcontrolpanel,$oldsoundpanel,$Button1,$NFS))
+$Panel3.controls.AddRange(@($sfc,$Label6,$windowsupdatefix,$ncpa,$oldcontrolpanel,$oldsoundpanel,$Button1,$DISM))
 
 $brave.Add_Click({
     Write-Host "Installing Brave Browser"
@@ -1741,17 +1741,12 @@ $oldcontrolpanel.Add_Click({
 $oldsystempanel.Add_Click({
     cmd /c sysdm.cpl
 })
-$NFS.Add_Click({
-    Enable-WindowsOptionalFeature -Online -FeatureName "ServicesForNFS-ClientOnly" -All
-    Enable-WindowsOptionalFeature -Online -FeatureName "ClientForNFS-Infrastructure" -All
-    Enable-WindowsOptionalFeature -Online -FeatureName "NFS-Administration" -All
-    nfsadmin client stop
-    Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\ClientForNFS\CurrentVersion\Default" -Name "AnonymousUID" -Type DWord -Value 0
-    Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\ClientForNFS\CurrentVersion\Default" -Name "AnonymousGID" -Type DWord -Value 0
-    nfsadmin client start
-    nfsadmin client localhost config fileaccess=755 SecFlavors=+sys -krb5 -krb5i
-    Write-Host "NFS is now setup for user based NFS mounts"
-    $ResultText.text = "`r`n" +"`r`n" + "NFS is now setup for user based NFS mounts"
+$DISM.Add_Click({
+    Write-Host "DISM running..."
+    $ResultText.text = "DISM running..."
+    Start-Process -FilePath "sfc.exe" -ArgumentList '/online /cleanup-image /restorehealth' -Wait -NoNewWindow
+    Write-Host "DISM Scan Complete"
+    $ResultText.text = "`r`n" +"`r`n" + "DISM Scan Complete"
 })
 $windowsupdatefix.Add_Click({
     Write-Host "1. Stopping Windows Update Services..." 
