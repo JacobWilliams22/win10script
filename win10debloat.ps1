@@ -762,10 +762,10 @@ $powertoys.Add_Click({
     $ResultText.text = "`r`n" + "Finished Installing Microsoft PowerToys" + "`r`n" + "`r`n" + "Ready for Next Task"
 })
 
-$powertoys.Add_Click({
+$ccleaner.Add_Click({
     Write-Host "Installing CCleaner"
     $ResultText.text = "`r`n" +"`r`n" + "Installing Microsoft CCleaner... Please Wait" 
-    winget install -e Piriform.CCleaner | Out-Host
+    winget install Piriform.CCleaner -s winget | Out-Host
     if($?) { Write-Host "Installed CCleaner" }
     $ResultText.text = "`r`n" + "Finished Installing CCleaner" + "`r`n" + "`r`n" + "Ready for Next Task"
 })
