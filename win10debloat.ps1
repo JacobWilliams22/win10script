@@ -1723,7 +1723,7 @@ $DisableNumLock.Add_Click({
 
 $yourphonefix.Add_Click({
     Write-Host "SFC running..."
-    start-job -name SFC -ScriptBlock { sfc /scannow }
+    Start-Process -FilePath "sfc.exe" -ArgumentList '/scannow' -Wait -NoNewWindow
     Write-Host "SFC Scan Complete"
     $ResultText.text = "`r`n" +"`r`n" + "SFC Scan Complete"
 })
