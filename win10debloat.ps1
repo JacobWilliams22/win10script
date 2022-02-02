@@ -1723,6 +1723,7 @@ $DisableNumLock.Add_Click({
 
 $sfc.Add_Click({
     Write-Host "SFC running..."
+    $ResultText.text = "SFC running..."
     Start-Process -FilePath "sfc.exe" -ArgumentList '/scannow' -Wait -NoNewWindow
     Write-Host "SFC Scan Complete"
     $ResultText.text = "`r`n" +"`r`n" + "SFC Scan Complete"
