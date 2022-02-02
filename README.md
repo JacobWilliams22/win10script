@@ -19,5 +19,3 @@ Or, shorter:
 ```
 iwr -useb https://raw.githubusercontent.com/JacobWilliams22/win10script/master/win10debloat.ps1 | iex
 ```
-
-For complete details check out https://christitus.com/debloat-windows-10-2020/
