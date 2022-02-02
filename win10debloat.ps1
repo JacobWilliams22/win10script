@@ -1744,7 +1744,7 @@ $oldsystempanel.Add_Click({
 $DISM.Add_Click({
     Write-Host "DISM running..."
     $ResultText.text = "DISM running..."
-    Start-Process -FilePath "sfc.exe" -ArgumentList '/online /cleanup-image /restorehealth' -Wait -NoNewWindow
+    Start-Process -FilePath "dism.exe" -ArgumentList '/online /cleanup-image /restorehealth' -Wait -NoNewWindow
     Write-Host "DISM Scan Complete"
     $ResultText.text = "`r`n" +"`r`n" + "DISM Scan Complete"
 })
