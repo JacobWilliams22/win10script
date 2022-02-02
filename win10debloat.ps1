@@ -505,12 +505,12 @@ $discord.height                  = 30
 $discord.location                = New-Object System.Drawing.Point(4,170)
 $discord.Font                    = New-Object System.Drawing.Font('Microsoft Sans Serif',12)
 
-$WindDirStat                      = New-Object system.Windows.Forms.Button
-$WindDirStat.text                 = "WindDirStat"
-$WindDirStat.width                = 211
-$WindDirStat.height               = 30
-$WindDirStat.location             = New-Object System.Drawing.Point(4,136)
-$WindDirStat.Font                 = New-Object System.Drawing.Font('Microsoft Sans Serif',12)
+$WinDirStat                       = New-Object system.Windows.Forms.Button
+$WinDirStat.text                  = "WinDirStat"
+$WinDirStat.width                 = 211
+$WinDirStat.height                = 30
+$WinDirStat.location              = New-Object System.Drawing.Point(4,136)
+$WinDirStat.Font                  = New-Object System.Drawing.Font('Microsoft Sans Serif',12)
 
 $appearancefx                    = New-Object system.Windows.Forms.Button
 $appearancefx.text               = "Appearance Visual FX"
@@ -627,7 +627,7 @@ $NFS.location                    = New-Object System.Drawing.Point(4,232)
 $NFS.Font                        = New-Object System.Drawing.Font('Microsoft Sans Serif',12)
 
 $Form.controls.AddRange(@($Panel1,$Panel2,$Label3,$Label15,$Panel4,$PictureBox1,$Label1,$Label4,$Panel3,$ResultText,$Label10,$Label11,$urlfixwinstartup,$urlremovevirus,$urlcreateiso))
-$Panel1.controls.AddRange(@($brave,$firefox,$7zip,$sharex,$adobereader,$notepad,$gchrome,$mpc,$vlc,$powertoys,$ccleaner,$winterminal,$vscode,$Label2,$sumatrapdf,$vscodium,$imageglass,$gimp,$Label7,$Label8,$Label9,$advancedipscanner,$putty,$etcher,$translucenttb,$githubdesktop,$discord,$WindDirStat))
+$Panel1.controls.AddRange(@($brave,$firefox,$7zip,$sharex,$adobereader,$notepad,$gchrome,$mpc,$vlc,$powertoys,$ccleaner,$winterminal,$vscode,$Label2,$sumatrapdf,$vscodium,$imageglass,$gimp,$Label7,$Label8,$Label9,$advancedipscanner,$putty,$etcher,$translucenttb,$githubdesktop,$discord,$WinDirStat))
 $Panel2.controls.AddRange(@($essentialtweaks,$backgroundapps,$cortana,$actioncenter,$darkmode,$performancefx,$onedrive,$lightmode,$essentialundo,$EActionCenter,$ECortana,$RBackgroundApps,$HTrayIcons,$EClipboardHistory,$ELocation,$InstallOneDrive,$removebloat,$reinstallbloat,$WarningLabel,$Label5,$appearancefx,$STrayIcons,$EHibernation,$dualboottime))
 $Panel4.controls.AddRange(@($defaultwindowsupdate,$securitywindowsupdate,$Label16,$Label17,$Label18,$Label19))
 $Panel3.controls.AddRange(@($sfc,$Label6,$windowsupdatefix,$ncpa,$oldcontrolpanel,$oldsoundpanel,$Button1,$NFS))
