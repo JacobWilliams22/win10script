@@ -1721,7 +1721,7 @@ $DisableNumLock.Add_Click({
     $ResultText.text = "`r`n" +"`r`n" + "NUMLOCK Disabled"
 })
 
-$yourphonefix.Add_Click({
+$sfc.Add_Click({
     Write-Host "SFC running..."
     Start-Process -FilePath "sfc.exe" -ArgumentList '/scannow' -Wait -NoNewWindow
     Write-Host "SFC Scan Complete"
