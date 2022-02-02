@@ -506,7 +506,7 @@ $discord.location                = New-Object System.Drawing.Point(4,170)
 $discord.Font                    = New-Object System.Drawing.Font('Microsoft Sans Serif',12)
 
 $WindDirStat                       = New-Object system.Windows.Forms.Button
-$WindDirStat .text                 = "WindDirStat "
+$WindDirStat .text                 = "WindDirStat"
 $WindDirStat .width                = 211
 $WindDirStat .height               = 30
 $WindDirStat .location             = New-Object System.Drawing.Point(4,136)
