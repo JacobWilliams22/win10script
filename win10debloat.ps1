@@ -1722,7 +1722,7 @@ $DisableNumLock.Add_Click({
 })
 
 $yourphonefix.Add_Click({
-    Write-Host "SFC /scannow"
+    Write-Host "SFC running..."
     sfc /scannow
     Write-Host "SFC Scan Complete"
     $ResultText.text = "`r`n" +"`r`n" + "SFC Scan Complete"
