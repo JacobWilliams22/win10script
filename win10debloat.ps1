@@ -659,7 +659,7 @@ $gchrome.Add_Click({
 $WinDirStat.Add_Click({
     Write-Host "Installing WinDirStat"
     $ResultText.text = "`r`n" +"`r`n" + "Installing WinDirStat... Please Wait" 
-    winget install -e WinDirStat.WinDirStat | Out-Host
+    winget install -e WinDirStat.WinDirStat -s winget | Out-Host
     if($?) { Write-Host "Installed WinDirStat" }
     $ResultText.text = "`r`n" + "Finished Installing WinDirStat" + "`r`n" + "`r`n" + "Ready for Next Task"
 })
