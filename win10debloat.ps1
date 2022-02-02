@@ -130,7 +130,7 @@ $ccleaner                       = New-Object system.Windows.Forms.Button
 $ccleaner.text                  = "CCleaner"
 $ccleaner.width                 = 211
 $ccleaner.height                = 30
-$ccleaner.location              = New-Object System.Drawing.Point(4,67)
+$ccleaner.location              = New-Object System.Drawing.Point(3,368)
 $ccleaner.Font                  = New-Object System.Drawing.Font('Microsoft Sans Serif',12)
 
 $winterminal                     = New-Object system.Windows.Forms.Button
@@ -365,13 +365,6 @@ $InstallOneDrive.width           = 205
 $InstallOneDrive.height          = 30
 $InstallOneDrive.location        = New-Object System.Drawing.Point(2,554)
 $InstallOneDrive.Font            = New-Object System.Drawing.Font('Microsoft Sans Serif',12)
-
-$everythingsearch                = New-Object system.Windows.Forms.Button
-$everythingsearch.text           = "Everything Search"
-$everythingsearch.width          = 211
-$everythingsearch.height         = 30
-$everythingsearch.location       = New-Object System.Drawing.Point(3,368)
-$everythingsearch.Font           = New-Object System.Drawing.Font('Microsoft Sans Serif',12)
 
 $sumatrapdf                      = New-Object system.Windows.Forms.Button
 $sumatrapdf.text                 = "Sumatra PDF"
