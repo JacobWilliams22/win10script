@@ -562,35 +562,6 @@ $dualboottime.height             = 30
 $dualboottime.location           = New-Object System.Drawing.Point(3,754)
 $dualboottime.Font               = New-Object System.Drawing.Font('Microsoft Sans Serif',12)
 
-$Label11                         = New-Object system.Windows.Forms.Label
-$Label11.text                    = "Videos to Fix Windows"
-$Label11.AutoSize                = $true
-$Label11.width                   = 25
-$Label11.height                  = 10
-$Label11.location                = New-Object System.Drawing.Point(687,659)
-$Label11.Font                    = New-Object System.Drawing.Font('Microsoft Sans Serif',12)
-
-$urlfixwinstartup                = New-Object system.Windows.Forms.Button
-$urlfixwinstartup.text           = "Repair Windows Startup"
-$urlfixwinstartup.width          = 232
-$urlfixwinstartup.height         = 30
-$urlfixwinstartup.location       = New-Object System.Drawing.Point(646,702)
-$urlfixwinstartup.Font           = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
-
-$urlremovevirus                  = New-Object system.Windows.Forms.Button
-$urlremovevirus.text             = "Clean Viruses"
-$urlremovevirus.width            = 232
-$urlremovevirus.height           = 30
-$urlremovevirus.location         = New-Object System.Drawing.Point(646,745)
-$urlremovevirus.Font             = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
-
-$urlcreateiso                    = New-Object system.Windows.Forms.Button
-$urlcreateiso.text               = "Create Custom ISO"
-$urlcreateiso.width              = 232
-$urlcreateiso.height             = 30
-$urlcreateiso.location           = New-Object System.Drawing.Point(646,790)
-$urlcreateiso.Font               = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
-
 $ncpa                            = New-Object system.Windows.Forms.Button
 $ncpa.text                       = "Network Connections"
 $ncpa.width                      = 211
