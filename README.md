@@ -2,6 +2,7 @@
 - CCleaner Winget
 - SFC and DISM options
 - WinDirStat Winget
+- Revo Uninstaller Winget
 
 ## How to Run
 Paste this command into Powershell (admin):
